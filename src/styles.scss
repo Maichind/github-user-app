@@ -11,3 +11,11 @@ body {
     overflow-y: auto;
     margin: 0 auto; //Center the container
 }
+
+.content{
+    background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+}
+
+[mb-0] {
+    margin-bottom: 0;
+}

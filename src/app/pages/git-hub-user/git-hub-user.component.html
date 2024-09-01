@@ -1,14 +1,17 @@
 <div class="content">
     <div class="search-container">
-        <h1>GitHub User Search</h1>
-        <div class="search-container">
+        <div class="form-search">
             <input type="text" [(ngModel)]="username" placeholder="Enter GitHub username" />
-            <i class="fas fa-search"></i>
-            <button (click)="searchUser()">Search</button>
+            <i class="fas fa-search search-icon"></i>
         </div>
+        <button (click)="searchUser()">Search</button>
     </div>
-    <div *ngIf="user">
-        <app-user-card [user]="user" [repos]="repos"></app-user-card>
+
+    <div class="spinner-container" *ngIf="loading">
+        <div class="spinner"></div>
+    </div>
+      
+    <div *ngIf="!loading">
+        <app-user-card *ngIf="user" [user]="user" [repos]="repos"></app-user-card>
     </div>
 </div>
-  

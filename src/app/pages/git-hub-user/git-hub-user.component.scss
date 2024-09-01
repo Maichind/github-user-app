@@ -6,34 +6,76 @@
   align-items: center;
   flex-direction: column;
 }
+
 .search-container {
-  position: relative;
-  h1 {
-    font-size: 30px;
-    font-weight: 500;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 20px;
+
+  .form-search {
+    position: relative;
+    flex-grow: 1;
+    max-width: 400px;
   }
-  margin-top: 20px;
+
   input {
-    border-radius: 20px;
+    border-radius: 25px;
     border: 1px solid #ccc;
-    padding: 10px;
-    width: 300px;
-    opacity: 0.8;
+    padding: 12px 20px;
+    width: 100%;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(72, 113, 240, 0.3);
+    }
   }
-  i {
+
+  .search-icon {
     position: absolute;
-    right: 105px;
-    top: 10px;
+    color: #4871f0;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 18px;
   }
+
   button {
-    margin-left: 10px;
-    padding: 10px 20px;
-    border-radius: 20px;
-    background-color: #007bff;
+    padding: 12px 24px;
+    border-radius: 25px;
+    background-color: #4871f0;
     color: white;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken(#4871f0, 10%);
+    }
   }
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.spinner {
+  border: 12px solid #f3f3f3; /* Color del borde */
+  border-top: 12px solid #4871f0; /* Color de la animación */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

@@ -1,0 +1,18 @@
+<div *ngIf="user" class="card-container">
+    <div class="card">
+      <h2>{{ user.name }}</h2>
+      <img [src]="user.avatar_url" alt="Profile Picture" class="profile-pic"/>
+      <p>{{ user.bio }}</p>
+      <p><strong>Followers:</strong> {{ user.followers }}</p>
+      <p><strong>Public Repositories:</strong> {{ user.public_repos }}</p>
+    </div>
+  
+    <div *ngIf="repos.length" class="repo-card-container">
+      <h3>Recent Repositories:</h3>
+      <div class="repo-card" *ngFor="let repo of repos">
+        <strong>{{ repo.name }}</strong>
+        <p>{{ repo.description }}</p>
+      </div>
+    </div>
+</div>
+  

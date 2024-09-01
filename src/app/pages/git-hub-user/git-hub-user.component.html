@@ -1,18 +1,14 @@
-<div *ngIf="user">
-    <h2>{{ user.name }}</h2>
-    <img [src]="user.avatar_url" alt="Profile Picture" />
-    <p>{{ user.bio }}</p>
-    <p>Followers: {{ user.followers }}</p>
-    <p>Public Repositories: {{ user.public_repos }}</p>
-  
-    <div *ngIf="repos.length">
-      <h3>Recent Repositories:</h3>
-      <ul>
-        <li *ngFor="let repo of repos">
-          <strong>{{ repo.name }}</strong>
-          <p>{{ repo.description }}</p>
-        </li>
-      </ul>
+<div class="content">
+    <div class="search-container">
+        <h1>GitHub User Search</h1>
+        <div class="search-container">
+            <input type="text" [(ngModel)]="username" placeholder="Enter GitHub username" />
+            <i class="fas fa-search"></i>
+            <button (click)="searchUser()">Search</button>
+        </div>
+    </div>
+    <div *ngIf="user">
+        <app-user-card [user]="user" [repos]="repos"></app-user-card>
     </div>
 </div>
   

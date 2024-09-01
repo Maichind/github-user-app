@@ -1,0 +1,10 @@
+<div class="mat-dialog-header">
+    <h2 mat-dialog-title>Error</h2>
+    <i class="fas fa-times" style="cursor: pointer;" (click)="onClose()"></i>
+</div>
+<div mat-dialog-content>
+  <p>{{ data.message }}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onClose()">Close</button>
+</div>

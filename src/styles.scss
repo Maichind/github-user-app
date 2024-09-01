@@ -10,10 +10,15 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
     margin: 0 auto; //Center the container
+    background: linear-gradient(to bottom, #ffffff, #e0e0e0);
 }
 
 .content{
-    background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   height: 92vh;
 }
 
 [mb-0] {

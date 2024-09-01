@@ -1,10 +1,11 @@
-.content{
-  height: 90vh;
+.content-comp{
+  height: 100%;
   overflow-y: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 16px;
 }
 
 .search-container {

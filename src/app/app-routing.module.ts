@@ -9,13 +9,13 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       {
-        path: 'github-user',
+        path: 'search-user',
         component: GitHubUserComponent
       },
-      { path: '', redirectTo: 'github-user', pathMatch: 'full' },
+      { path: '', redirectTo: 'search-user', pathMatch: 'full' },
     ],
   },
-  { path: '**', redirectTo: 'github-user', pathMatch: 'full' },
+  { path: '**', redirectTo: 'search-user', pathMatch: 'full' },
 ];
 
 @NgModule({

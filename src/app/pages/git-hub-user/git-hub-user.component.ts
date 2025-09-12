@@ -22,7 +22,7 @@ export class GitHubUserComponent {
       this.githubService.getUser(this.username).subscribe({
         next: (data: any) => {
           this.user = data;
-    
+
           this.githubService.getUserRepos(this.username).subscribe({
             next: (repos: any) => {
               this.repos = repos;
@@ -42,7 +42,7 @@ export class GitHubUserComponent {
     } else {
       this.showErrorDialog('You must enter a character for the search.');
     }
-  }  
+  }
 
   showErrorDialog(message: string): void {
     this.dialog.open(ErrorDialogComponent, {
@@ -50,5 +50,5 @@ export class GitHubUserComponent {
       disableClose: true
     });
   }
-  
+
 }

@@ -14,9 +14,13 @@ export class UserCardComponent {
   toggleReposVisibility(event: MouseEvent) {
     event.preventDefault();
     this.showRepos = !this.showRepos;
-  }  
+  }
 
   get recentepos() {
     return this.repos.slice(0, 3);
+  }
+
+  goGithub(url: string) {
+    window.open(url, '_blank');
   }
 }
